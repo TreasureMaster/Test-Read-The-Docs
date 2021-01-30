@@ -55,4 +55,11 @@ class ExampleClass:
         str
             Возвращает информацию об экземпляре.
         """
+        date = 'mock_date'
+        time = 'mock_time'
+        """
+        Note
+        -----
+        Простой тест документации внутри кода. Документирование здесь не поддерживается.
+        """
         return "I am a very smart {} object.".format(self.name)
