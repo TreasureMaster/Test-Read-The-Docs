@@ -22,7 +22,7 @@ copyright = '2021, TreasureMaster'
 author = 'TreasureMaster'
 
 # The full version, including alpha/beta/rc tags
-release = '1'
+release = '1.0.6'
 
 
 # -- General configuration ---------------------------------------------------

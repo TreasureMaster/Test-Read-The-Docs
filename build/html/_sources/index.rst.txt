@@ -12,6 +12,7 @@ Welcome to Test project's documentation!
 
    example1
    example2
+   pytest_cli_args
    example_code
 
 .. |favicon| image:: _static/favicon.png

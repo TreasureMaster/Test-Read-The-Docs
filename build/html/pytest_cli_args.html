@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Опции командной строки pytest &mdash; документация Test project 1.0.6</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Документирование кода Python" href="example_code.html" />
+    <link rel="prev" title="Это пример 2" href="example2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Test project
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example1.html">Заголовок 1 уровня</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example2.html">Это пример 2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Опции командной строки pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_code.html">Документирование кода Python</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Test project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Опции командной строки pytest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pytest_cli_args.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pytest">
+<h1>Опции командной строки pytest<a class="headerlink" href="#pytest" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">–collect-only</dt>
+<dd class="field-odd"><p>Показывает какие тесты будут выполняться с заданными параметрами
+и конфигурацией. Полезен для проверки правильности выбора других
+опций, которые выбирают перед запуском тестов.</p>
+</dd>
+<dt class="field-even">-k EXPRESSION</dt>
+<dd class="field-even"><p>Позволяет использовать выражение для определения функция тестирования.
+Используется как фильтр, выбирая тесты с определенным префиксом или
+суффиксом в названии.</p>
+</dd>
+<dt class="field-odd">-m MARKEXPR</dt>
+<dd class="field-odd"><p>Помечает подмножество тестовых функций для совместного запуска.
+Маркирует тесты в коде заданным именем с помощью декоратора
+<code class="docutils literal notranslate"><span class="pre">&#64;pytest.mark.run_my_marker</span></code>. Теперь можно запустить тесты,
+помеченные этим маркером как <code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-m</span> <span class="pre">run_my_marker</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Предупреждение</p>
+<p>Теперь необходимо помещать имена маркеров в файлы <code class="docutils literal notranslate"><span class="pre">pytest.ini</span></code>
+или <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. В противном случае будут выводиться
+предупреждения. Описание создания маркеров находиться в
+<a class="reference external" href="https://docs.pytest.org/en/stable/mark.html">документации</a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">-x, –exitfirst</dt>
+<dd class="field-odd"><p>Прерывает тесты после первого же сбоя. Без этой опции
+тестирование продолжится до конца.</p>
+</dd>
+<dt class="field-even">–maxfail=num</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">-x</span></code> приводит к остановке тестов после первого отказа.
+<code class="docutils literal notranslate"><span class="pre">--maxfail</span></code> позволяет установить количество допустимых
+отказов. <code class="docutils literal notranslate"><span class="pre">--maxfail=1</span></code> - то же самое, что и <code class="docutils literal notranslate"><span class="pre">-x</span></code>.</p>
+</dd>
+<dt class="field-odd">-s и –capture=method</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">-s</span></code> позволяет печатать операторы или любой другой вывод,
+который обычно печатается в <code class="docutils literal notranslate"><span class="pre">stdout</span></code>. Это включает возможность
+печати из <code class="docutils literal notranslate"><span class="pre">print()</span></code> в тестах. Аналог параметра <code class="docutils literal notranslate"><span class="pre">--capture=no</span></code>.
+Опция <code class="docutils literal notranslate"><span class="pre">--capture=sys</span></code> заменяет <code class="docutils literal notranslate"><span class="pre">sys.stdout/stderr</span></code> в mem-файлах.
+Опция <code class="docutils literal notranslate"><span class="pre">--capture=fd</span></code> указывает файловые дескрипторы 1 и 2 на
+временный файл.</p>
+</dd>
+<dt class="field-even">–lf, –last-failed</dt>
+<dd class="field-even"><p>После сбоя тестов выполняет только те, в которых произошел сбой.
+Удобно после использования опции <code class="docutils literal notranslate"><span class="pre">--tb</span></code> для сокрытия лишней информации.</p>
+</dd>
+<dt class="field-odd">–ff, –failed-first</dt>
+<dd class="field-odd"><p>Вначале выполняет то же, что и <code class="docutils literal notranslate"><span class="pre">--last-failed</span></code>, т.е. запускает тесты,
+в которых произошел сбой, а затем запускает все оставшиеся тесты.</p>
+</dd>
+<dt class="field-even">-v, –verbose</dt>
+<dd class="field-even"><p>Предоставляет более развернутую информацию по итогам тестирования.</p>
+</dd>
+<dt class="field-odd">-q, –quiet</dt>
+<dd class="field-odd"><p>Эта опция противоположна <code class="docutils literal notranslate"><span class="pre">-v/--verbose</span></code>. Она сокращает объем информации в отчете.
+В сочетании с <code class="docutils literal notranslate"><span class="pre">--tb=line</span></code> выводит только неудавшиеся строки любых неудачных тестов.</p>
+</dd>
+<dt class="field-even">-l, –showlocals</dt>
+<dd class="field-even"><p>Локальные переменные отображаются вместе с traceback после неудачного теста
+со значением, которое они содержали во время неудавшегося assert.</p>
+</dd>
+<dt class="field-odd">–tb=style</dt>
+<dd class="field-odd"><p>Изменяет способо вывода пакетов трассировки для сбоев. <code class="docutils literal notranslate"><span class="pre">--tb=short</span></code> печатает
+только строку <code class="docutils literal notranslate"><span class="pre">assert</span></code> и символ <code class="docutils literal notranslate"><span class="pre">E</span></code> без контекста. <code class="docutils literal notranslate"><span class="pre">--tb=line</span></code> сохраняет
+ошибку в одной строке. <code class="docutils literal notranslate"><span class="pre">--tb=no</span></code> полностью удаляет трассировку.
+<code class="docutils literal notranslate"><span class="pre">--tb=long</span></code> покажет наиболее информативный traceback.
+<code class="docutils literal notranslate"><span class="pre">--tb=auto</span></code> покажет наиболее информативный traceback для первого и последнего тестов,
+если есть несколько сбоев (по умолчанию).
+<code class="docutils literal notranslate"><span class="pre">--tb=native</span></code> покажет стандартный traceback без дополнительной информации.</p>
+</dd>
+<dt class="field-even">–durations=N</dt>
+<dd class="field-even"><p>Сообщает самый медленный N номер тестов по окончании их прохождения.
+<code class="docutils literal notranslate"><span class="pre">--durations=0</span></code> сообщает обо всем по порядке от самого медленного
+к самому быстрому. Тест состоит и 3 этапов - <code class="docutils literal notranslate"><span class="pre">call</span></code> (вызов), <code class="docutils literal notranslate"><span class="pre">setup</span></code>
+(настройка) и <code class="docutils literal notranslate"><span class="pre">teardown</span></code> (опровержение).</p>
+</dd>
+<dt class="field-odd">–version</dt>
+<dd class="field-odd"><p>Показывает версию pytest и каталог, в который он установлен.</p>
+</dd>
+<dt class="field-even">-h, –help</dt>
+<dd class="field-even"><p>Показывает не только помощь pytest, но и помощь всех установленных плагинов.</p>
+</dd>
+<dt class="field-odd">–markers</dt>
+<dd class="field-odd"><p>Показывает доступные маркеры.</p>
+</dd>
+<dt class="field-even">–fixtures</dt>
+<dd class="field-even"><p>Показывает доступные фикстуры.</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="example_code.html" class="btn btn-neutral float-right" title="Документирование кода Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example2.html" class="btn btn-neutral float-left" title="Это пример 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, TreasureMaster.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
